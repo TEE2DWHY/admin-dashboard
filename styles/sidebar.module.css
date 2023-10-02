@@ -1,0 +1,26 @@
+.sidebar {
+  width: 20%;
+  background-color: #3a51ad;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.sidebarContainer {
+  width: 60%;
+}
+
+.myList {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.myList li {
+  padding: 10px 0;
+}
