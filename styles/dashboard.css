@@ -2,8 +2,55 @@
   width: 80%;
 }
 
+.user {
+  background-color: #f7f9fc;
+  padding: 20px 30px;
+}
+
 .dashboard-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  border-radius: 3px;
+  width: 20%;
+}
+
+.card-col-1 {
+  flex-direction: column;
+}
+
+.card-figure {
+  color: #495057;
+}
+.card-info {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.roi-container {
+  background-color: #64ccc5;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cards:nth-child(3) .roi-container {
+  background-color: red;
+}
+
+.time-frame {
+  font-size: 12px;
 }
