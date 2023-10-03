@@ -1,5 +1,5 @@
 // styling
-import styles from "../styles/dashboard.module.css";
+import "../styles/dashboard.css";
 // components
 import Navbar from "./navbar";
 import User from "./user";
@@ -7,7 +7,7 @@ import User from "./user";
 const Dashboard = () => {
   return (
     <>
-      <div className={styles.dashboard}>
+      <div className="dashboard-contents">
         <Navbar />
         <User />
       </div>

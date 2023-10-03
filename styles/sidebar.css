@@ -10,17 +10,17 @@
   top: 0;
 }
 
-.sidebarContainer {
+.sidebar-container {
   width: 60%;
 }
 
-.myList {
+ul {
   list-style: none;
   padding: 0;
   text-align: left;
   font-size: 14px;
 }
 
-.myList li {
+li {
   padding: 10px 0;
 }

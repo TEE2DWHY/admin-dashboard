@@ -1,11 +1,11 @@
 // styling
 import Dashboard from "@/components/dashboard";
-import styles from "../styles/home.module.css";
+import "../styles/home.css";
 // components
 import Sidebar from "@/components/sidebar";
 const Home = () => {
   return (
-    <div className={styles.dashboard}>
+    <div className="dashboard">
       <Sidebar />
       <Dashboard />
     </div>

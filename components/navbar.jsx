@@ -1,14 +1,13 @@
 // styling
-import { Toggle } from "@/icons/icons";
-import styles from "../styles/navbar.module.css";
+import "../styles/navbar.css";
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
-      <div className={styles.navLeft}>
+    <div className="navbar">
+      <div className="nav-left">
         <h4>Toggle</h4>
         <input type="text" placeholder="Search" />
       </div>
-      <div className={styles.navRight}>Right</div>
+      <div className="nav-right">Right</div>
     </div>
   );
 };

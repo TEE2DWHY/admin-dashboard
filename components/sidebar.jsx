@@ -1,10 +1,10 @@
-import styles from "../styles/sidebar.module.css";
+import "../styles/sidebar.css";
 const Sidebar = () => {
   return (
-    <div className={styles.sidebar}>
+    <div className="sidebar">
       <h3>Logo</h3>
-      <div className={styles.sidebarContainer}>
-        <ul className={styles.myList}>
+      <div className="sidebar-container pages">
+        <ul>
           <li>Pages</li>
           <li>Dashboards</li>
           <li>Defaults</li>
@@ -14,8 +14,8 @@ const Sidebar = () => {
           <li>Crypto</li>
         </ul>
       </div>
-      <div className={styles.sidebarContainer}>
-        <ul className={styles.myList}>
+      <div className="sidebar-container tools-components">
+        <ul>
           <li>Tools & Components</li>
           <li>UI Elements</li>
           <li>Icons</li>
@@ -23,8 +23,8 @@ const Sidebar = () => {
           <li>Tables</li>
         </ul>
       </div>
-      <div className={styles.sidebarContainer}>
-        <ul className={styles.myList}>
+      <div className="sidebar-container plugins-addons">
+        <ul>
           <li>Plugins and Addons</li>
           <li>Form Plugins</li>
           <li>Advanced Tables</li>

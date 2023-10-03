@@ -1,0 +1,9 @@
+.dashboard-contents {
+  width: 80%;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
