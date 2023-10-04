@@ -1,10 +1,20 @@
 // styling
 import "../styles/dashboard.css";
 // data
-import cardDetails from "@/data/data";
-// component
+import { cardDetails } from "@/data/data";
+// components
 import Cards from "./cards";
 import Sales from "./sales";
+import DailyFeed from "./dailyfeed";
+import Schedule from "./schedule";
+const CardIntro = () => {
+  return (
+    <div>
+      <h3>Welcome Tayo</h3>
+      <p>AppStack Dashboard</p>
+    </div>
+  );
+};
 const User = () => {
   return (
     <>
@@ -14,10 +24,7 @@ const User = () => {
           <div>Today filter reload</div>
         </div>
         <div className="card">
-          <div>
-            <h3>Welcome Tayo</h3>
-            <p>AppStack Dashboard</p>
-          </div>
+          <CardIntro />
           {cardDetails.map((cards, index) => (
             <Cards
               key={index}
@@ -28,7 +35,11 @@ const User = () => {
             />
           ))}
         </div>
-        <Sales />
+        <div className="container-2">
+          <Sales />
+          <DailyFeed />
+        </div>
+        <Schedule />
       </div>
     </>
   );
