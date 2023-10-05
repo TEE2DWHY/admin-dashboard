@@ -1,18 +1,19 @@
 "use client";
+
 import { useState } from "react";
 // styling
 import "../styles/dashboard.css";
 // data
-import { userData } from "@/data/data";
+import { salesData } from "@/data/data";
 import Barchart from "./barchart";
 
 const Sales = () => {
   const [UserData, setUserData] = useState({
-    labels: userData.map((data) => data.year),
+    labels: salesData.map((data) => data.year),
     datasets: [
       {
-        label: "Sales Increase",
-        data: userData.map((data) => data.userGain),
+        label: "Sales/ Revenue Data",
+        data: salesData.map((data) => data.amountSold),
         backgroundColor: ["#AED2FF"],
         borderColor: "#000",
         borderWidth: 1,

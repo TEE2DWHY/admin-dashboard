@@ -162,37 +162,32 @@ const projects = [
   },
 ];
 
-const userData = [
+const salesData = [
   {
     id: 1,
     year: 2016,
-    userGain: 8000,
-    userLost: 823,
+    amountSold: 4000,
   },
   {
     id: 2,
     year: 2017,
-    userGain: 4567,
-    userLost: 555,
+    amountSold: 4567,
   },
   {
     id: 3,
     year: 2018,
-    userGain: 8000,
-    userLost: 823,
+    amountSold: 6000,
   },
   {
     id: 4,
     year: 2019,
-    userGain: 9000,
-    userLost: 455,
+    amountSold: 5500,
   },
   {
     id: 5,
     year: 2020,
-    userGain: 4300,
-    userLost: 424,
+    amountSold: 4300,
   },
 ];
 
-export { cardDetails, notifications, projects, userData };
+export { cardDetails, notifications, projects, salesData };
