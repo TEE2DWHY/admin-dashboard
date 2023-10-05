@@ -65,14 +65,23 @@
 }
 /* Sales */
 .sales {
-  display: flex;
-  justify-content: space-between;
   color: #6c757d;
   width: 70%;
   background-color: #fff;
   padding: 20px;
-  height: 350px;
+  height: fit-content;
   border-radius: 7px;
+}
+
+.sales-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bar-chart {
+  margin-top: 4%;
+  width: 100%;
 }
 
 /* Daily Feed  */
@@ -106,7 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0 20px 0;
+  padding: 0 0 7px 0;
   border-bottom: 1px solid #c1bfbf;
 }
 
@@ -236,7 +245,7 @@
 }
 table {
   width: 100%;
-  margin-top: 3%;
+  margin-top: 1%;
   font-size: 14px;
   border-spacing: 0;
 }
@@ -258,6 +267,13 @@ td {
   border-radius: 7px;
   border: none;
   font-size: 12px;
+  cursor: pointer;
+}
+
+.done:hover {
+  background-color: #5cf41f;
+  color: #fff;
+  transition: all 2s ease-in;
 }
 
 .in-progress {
@@ -267,6 +283,13 @@ td {
   border-radius: 7px;
   border: none;
   font-size: 12px;
+  cursor: pointer;
+}
+
+.in-progress:hover {
+  background-color: #f5db76;
+  color: #fff;
+  transition: all 2s ease-in;
 }
 
 .cancelled {
@@ -276,4 +299,11 @@ td {
   border-radius: 7px;
   border: none;
   font-size: 12px;
+  cursor: pointer;
+}
+
+.cancelled:hover {
+  background-color: #ee5552;
+  color: #fff;
+  transition: all 2s ease-in;
 }
