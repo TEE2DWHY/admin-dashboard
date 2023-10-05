@@ -7,6 +7,7 @@ import Cards from "./cards";
 import Sales from "./sales";
 import DailyFeed from "./dailyfeed";
 import Schedule from "./schedule";
+import LatestProjects from "./latestprojects";
 const CardIntro = () => {
   return (
     <div>
@@ -40,6 +41,7 @@ const User = () => {
           <DailyFeed />
         </div>
         <Schedule />
+        <LatestProjects />
       </div>
     </>
   );

@@ -219,3 +219,61 @@
 .value li {
   color: #257a70;
 }
+
+/* Latest-Projects */
+.latest-projects {
+  margin-top: 3%;
+  background-color: #fff;
+  color: #6c757d;
+  padding: 20px 0;
+  border-radius: 7px;
+}
+.latest-projects .header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+table {
+  width: 100%;
+  margin-top: 3%;
+  font-size: 14px;
+  border-spacing: 0;
+}
+table th,
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+.dark-row {
+  background-color: #f7f9fc;
+  color: #000;
+}
+
+.done {
+  background-color: #189723;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 7px;
+  border: none;
+  font-size: 12px;
+}
+
+.in-progress {
+  background-color: #f6ce30;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none;
+  font-size: 12px;
+}
+
+.cancelled {
+  background-color: #e70f0b;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none;
+  font-size: 12px;
+}

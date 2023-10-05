@@ -40,4 +40,75 @@ const notifications = [
   },
 ];
 
-export { cardDetails, notifications };
+const projects = [
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "done",
+    assignee: "Carl James",
+    className: "dark-row",
+    statusClass: "done",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "cancelled",
+    assignee: "Carl James",
+    statusClass: "cancelled",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "done",
+    assignee: "Carl James",
+    className: "dark-row",
+    statusClass: "done",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "in-progress",
+    assignee: "Carl James",
+    statusClass: "in-progress",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "cancelled",
+    assignee: "Carl James",
+    className: "dark-row",
+    statusClass: "cancelled",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "in-progress",
+    assignee: "Carl James",
+    statusClass: "in-progress",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "done",
+    assignee: "Carl James",
+    className: "dark-row",
+    statusClass: "done",
+  },
+  {
+    name: "Project Apollo",
+    startDate: "01/01/20201",
+    endDate: "31/06/201",
+    status: "done",
+    assignee: "Carl James",
+    statusClass: "done",
+  },
+];
+
+export { cardDetails, notifications, projects };
