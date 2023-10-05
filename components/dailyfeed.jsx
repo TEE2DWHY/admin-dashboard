@@ -10,8 +10,8 @@ const DailyFeed = () => {
         <div>Daily Feed</div>
         <span className="daily-feed-today">Today</span>
       </div>
-      {notifications.map((notification) => (
-        <div className="notifications">
+      {notifications.map((notification, index) => (
+        <div className="notifications" key={index}>
           <div className="notification-info">
             <img
               className="avatar"

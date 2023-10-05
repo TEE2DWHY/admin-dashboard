@@ -150,7 +150,72 @@
 /* Schedules */
 .schedules {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-top: 3%;
+}
+
+.schedule-container {
+  width: 33%;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 20px;
+  margin: 0 10px 0 0;
+}
+
+.pier-chart {
+  margin: auto;
+}
+
+.weekly-sales {
+  color: #6c757d;
+}
+
+.weekly-sales .header {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sales-amount li {
+  display: flex;
+  align-items: center;
+}
+
+.square1 {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(94, 45, 241);
+  margin-right: 5px;
+}
+
+.square2 {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(243, 210, 48);
+  margin-right: 5px;
+}
+
+.square3 {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(249, 80, 57);
+  margin-right: 5px;
+}
+
+.square4 {
+  width: 15px;
+  height: 15px;
+  background-color: #1b1b1b;
+  margin-right: 5px;
+}
+
+.weekly-sales .sale-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value li {
+  color: #257a70;
 }
