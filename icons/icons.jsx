@@ -24,10 +24,10 @@ export const DollarIcon = () => {
       strokeLinejoin="round"
       className="align-middle text-success"
       style={{
-        backgroundColor: "#4E4FEB",
+        backgroundColor: "#E0EAFC",
         padding: "10px",
         borderRadius: "50%",
-        color: "##3f80ea",
+        color: "#3f80ea",
       }}
     >
       <line x1="12" y1="1" x2="12" y2="23"></line>
