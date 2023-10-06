@@ -10,7 +10,7 @@ const Schedule = () => {
     labels: ["Direct", "Affiliate", "Email", "Others"],
     datasets: [
       {
-        label: "My First Dataset",
+        label: "Sales",
         data: weeklyRevenue.map((data) => data.sale),
         backgroundColor: weeklyRevenue.map((data) => data.backgroundColor),
         hoverOffset: 4,

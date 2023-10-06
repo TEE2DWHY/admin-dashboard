@@ -3,12 +3,15 @@ import Dashboard from "@/components/dashboard";
 import "../styles/home.css";
 // components
 import Sidebar from "@/components/sidebar";
+import Animate from "@/libs/Animate";
 const Home = () => {
   return (
-    <div className="dashboard">
-      <Sidebar />
-      <Dashboard />
-    </div>
+    <Animate>
+      <div className="dashboard">
+        <Sidebar />
+        <Dashboard />
+      </div>
+    </Animate>
   );
 };
 
