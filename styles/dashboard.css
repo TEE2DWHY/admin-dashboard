@@ -171,8 +171,9 @@
   margin: 0 10px 0 0;
 }
 
-.pier-chart {
-  margin: auto;
+.pie-chart {
+  margin-top: 5%;
+  width: 95%;
 }
 
 .weekly-sales {

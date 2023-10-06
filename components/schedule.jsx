@@ -1,6 +1,22 @@
+"use client";
+import { useState } from "react";
 // styling
 import "../styles/dashboard.css";
+// data
+import { weeklyRevenue } from "@/data/data";
+import PieChart from "./piechart";
 const Schedule = () => {
+  const [UserData, setUserData] = useState({
+    labels: ["Direct", "Affiliate", "Email", "Others"],
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: weeklyRevenue.map((data) => data.sale),
+        backgroundColor: weeklyRevenue.map((data) => data.backgroundColor),
+        hoverOffset: 4,
+      },
+    ],
+  });
   return (
     <>
       <div className="schedules">
@@ -10,7 +26,9 @@ const Schedule = () => {
             <span>Weekly</span>
             <div>...</div>
           </div>
-          {/* <div className="pie-chart">PieChart Goes Here</div> */}
+          <div className="pie-chart">
+            <PieChart chartData={UserData} />
+          </div>
           <div className="sale-details">
             <div className="sales-amount">
               <h4>Sales</h4>

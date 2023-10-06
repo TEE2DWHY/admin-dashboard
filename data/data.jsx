@@ -190,4 +190,27 @@ const salesData = [
   },
 ];
 
-export { cardDetails, notifications, projects, salesData };
+const weeklyRevenue = [
+  {
+    id: 1,
+    sale: 52.08,
+    backgroundColor: "rgb(94, 45, 241)",
+  },
+  {
+    id: 2,
+    sale: 10.08,
+    backgroundColor: "rgb(243, 210, 48)",
+  },
+  {
+    id: 3,
+    sale: 65.97,
+    backgroundColor: "rgb(249, 80, 57)",
+  },
+  {
+    id: 4,
+    sale: 6.25,
+    backgroundColor: "#1b1b1b",
+  },
+];
+
+export { cardDetails, notifications, projects, salesData, weeklyRevenue };
