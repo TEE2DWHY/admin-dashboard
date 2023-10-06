@@ -27,7 +27,7 @@ export const DollarIcon = () => {
         backgroundColor: "#4E4FEB",
         padding: "10px",
         borderRadius: "50%",
-        color: "#fff",
+        color: "##3f80ea",
       }}
     >
       <line x1="12" y1="1" x2="12" y2="23"></line>

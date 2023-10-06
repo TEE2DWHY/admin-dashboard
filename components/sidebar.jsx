@@ -1,7 +1,7 @@
 import "../styles/sidebar.css";
 const Sidebar = () => {
   return (
-    <div className="sidebar" data-aos="slide-right" aos-duration="2000">
+    <div className="sidebar">
       <h3>Logo</h3>
       <div className="sidebar-container pages">
         <ul>

@@ -4,12 +4,16 @@ import "../styles/home.css";
 // components
 import Sidebar from "@/components/sidebar";
 import Animate from "@/libs/Animate";
+import { Skeleton } from "antd";
+
 const Home = () => {
   return (
     <Animate>
       <div className="dashboard">
-        <Sidebar />
-        <Dashboard />
+        <Skeleton active>
+          <Sidebar />
+          <Dashboard />
+        </Skeleton>
       </div>
     </Animate>
   );

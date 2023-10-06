@@ -1,4 +1,3 @@
-import Animate from "@/libs/Animate";
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 
