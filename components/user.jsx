@@ -8,7 +8,6 @@ import Sales from "./sales";
 import DailyFeed from "./dailyfeed";
 import Schedule from "./schedule";
 import LatestProjects from "./latestprojects";
-import Footer from "./footer";
 const CardIntro = () => {
   return (
     <div className="welcome-message">
@@ -44,15 +43,14 @@ const User = () => {
             />
           ))}
         </div>
-        <div className="container-2" data-aos="slide-up" aos-duration="2500">
+        <div className="container-2" data-aos="slide-up" aos-duration="2300">
           <Sales />
           <DailyFeed />
         </div>
-        <div data-aos="slide-up" aos-duration="2600">
+        <div data-aos="slide-up" aos-duration="2400">
           <Schedule />
           <LatestProjects />
         </div>
-        <Footer />
       </div>
     </>
   );
