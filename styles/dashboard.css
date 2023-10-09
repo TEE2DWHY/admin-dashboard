@@ -216,6 +216,11 @@
   justify-content: space-between;
 }
 
+.sales-dropdown {
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .sales-amount li {
   display: flex;
   align-items: center;

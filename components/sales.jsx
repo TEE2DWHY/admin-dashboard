@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // styling
 import "../styles/dashboard.css";
 // data
 import { salesData } from "@/data/data";
 import Barchart from "./barchart";
+import Modal from "./modal/modal";
 
 const Sales = () => {
   const [UserData, setUserData] = useState({
@@ -22,12 +23,40 @@ const Sales = () => {
     ],
   });
 
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const salesDropdown = document.querySelector(".sales-dropdown");
+    const toggleModal = () => {
+      setShowModal(!showModal);
+    };
+    salesDropdown.addEventListener("click", toggleModal);
+    return () => {
+      salesDropdown.removeEventListener("click", toggleModal);
+    };
+  }, [showModal]);
+
+  useEffect(() => {
+    const salesDropdown = document.querySelector(".sale-modal-container");
+    const toggleModal = () => {
+      setShowModal(!showModal);
+    };
+    salesDropdown.addEventListener("mouseleave", toggleModal);
+
+    return () => {
+      salesDropdown.removeEventListener("mouseleave", toggleModal);
+    };
+  }, [showModal]);
+
   return (
     <>
       <div className="sales">
         <div className="sales-header">
           <div className="sales-revenue">Sales/ Revenue</div>
-          <div className="sales-dropdown"> ... </div>
+          <div className="sale-modal-container">
+            <span className="sales-dropdown">...</span>
+            <div>{showModal && <Modal />}</div>
+          </div>
         </div>
         <div className="bar-chart">
           <Barchart chartData={UserData} />
