@@ -1,5 +1,6 @@
 // styling
 import "../styles/footer.css";
+const year = new Date().getFullYear();
 const Footer = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const Footer = () => {
           <li>Terms of Service</li>
         </ul>
         <ul className="right">
-          <li> &copy;CopyRight- AppStack</li>
+          <li> &copy; CopyRight - AppStack {year}</li>
         </ul>
       </footer>
     </>
