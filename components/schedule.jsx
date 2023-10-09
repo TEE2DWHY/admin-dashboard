@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // styling
 import "../styles/dashboard.css";
 // data
 import { weeklyRevenue } from "@/data/data";
 import PieChart from "./piechart";
+import Modal from "./modal/modal";
 const Schedule = () => {
   const [UserData, setUserData] = useState({
     labels: ["Direct", "Affiliate", "Email", "Others"],
@@ -17,6 +18,35 @@ const Schedule = () => {
       },
     ],
   });
+
+  const [weeklySalesModal, setWeeklySalesModal] = useState(false);
+
+  useEffect(() => {
+    const salesDropdown = document.querySelector(".weekly-sales-dropdown");
+    salesDropdown.addEventListener("click", () => {
+      setWeeklySalesModal(!weeklySalesModal);
+    });
+    return () => {
+      salesDropdown.removeEventListener("click", () => {
+        setWeeklySalesModal(!weeklySalesModal);
+      });
+    };
+  }, [weeklySalesModal]);
+
+  useEffect(() => {
+    const salesDropdownContainer = document.querySelector(
+      ".weekly-sales-modal"
+    );
+    salesDropdownContainer.addEventListener("mouseleave", () => {
+      setWeeklySalesModal(!weeklySalesModal);
+    });
+    return () => {
+      salesDropdownContainer.removeEventListener("mouseleave", () => {
+        setWeeklySalesModal(!weeklySalesModal);
+      });
+    };
+  }, [weeklySalesModal]);
+
   return (
     <>
       <div className="schedules">
@@ -24,7 +54,10 @@ const Schedule = () => {
         <div className="schedule-container weekly-sales">
           <div className="header">
             <span>Weekly</span>
-            <div>...</div>
+            <div className="weekly-sales-modal">
+              <span className="weekly-sales-dropdown">....</span>
+              <div>{weeklySalesModal && <Modal />}</div>
+            </div>
           </div>
           <div className="pie-chart">
             <PieChart chartData={UserData} />
