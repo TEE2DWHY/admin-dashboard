@@ -1,14 +1,37 @@
+"use client";
+import { useEffect, useState } from "react";
+
 // styling
 import "../styles/dashboard.css";
 // data
 import { projects } from "@/data/data";
+//  components
+import Modal from "./modal/modal";
+
 const LatestProjects = () => {
+  const [showProjectModal, setProjectModal] = useState(false);
+  // useEffect(() => {
+  //   const projectModal = document.querySelector(".project-modal");
+  //   projectModal.addEventListener("click", () => {
+  //     setProjectModal(!showProjectModal);
+  //   });
+
+  //   return () => {
+  //     projectModal.removeEventListener("click", () => {
+  //       setProjectModal(!showProjectModal);
+  //     });
+  //   };
+  // }, [showProjectModal]);
+
   return (
     <>
       <div className="latest-projects">
         <div className="header">
           <span>Latest Projects</span>
-          <span>...</span>
+          <div className="project-modal-container">
+            <div className="project-modal"> ...</div>
+            <div>{showProjectModal && <Modal />}</div>
+          </div>
         </div>
         <div className="project-table">
           <table>

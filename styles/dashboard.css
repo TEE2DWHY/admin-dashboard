@@ -217,7 +217,8 @@
 }
 
 .sales-dropdown,
-.weekly-sales-dropdown {
+.weekly-sales-dropdown,
+.project-modal {
   font-weight: 900;
   cursor: pointer;
 }

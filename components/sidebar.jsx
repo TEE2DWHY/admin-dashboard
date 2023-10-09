@@ -2,9 +2,9 @@ import "../styles/sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h3>Logo</h3>
       <div className="sidebar-container pages">
         <ul>
+          <li className="logo"> AppsStack.</li>
           <li>Pages</li>
           <li>Dashboards</li>
           <li>Defaults</li>

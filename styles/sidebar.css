@@ -22,6 +22,11 @@ ul {
   font-size: 14px;
 }
 
+ul .logo {
+  font-size: 22px;
+  font-weight: 900;
+}
+
 li {
   padding: 10px 0;
   cursor: pointer;
