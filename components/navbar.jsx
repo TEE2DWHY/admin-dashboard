@@ -15,7 +15,10 @@ const Navbar = () => {
           <Search />
         </div>
       </div>
-      <div className="nav-right">Right</div>
+      <div className="nav-right">
+        <img className="avatar" src={"/images/avatar-5.jpeg"} alt="" />
+        <p>Ashley Briggs</p>
+      </div>
     </div>
   );
 };
