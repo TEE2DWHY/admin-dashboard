@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // styling
 import "../styles/dashboard.css";
 // data
-import { weeklyRevenue } from "@/data/data";
+import { revenueRoi, revenues, salesMethods, weeklyRevenue } from "@/data/data";
 import PieChart from "./piechart";
 import Modal from "./modal/modal";
 const Schedule = () => {
@@ -66,36 +66,34 @@ const Schedule = () => {
             <div className="sales-amount">
               <h4>Sales</h4>
               <ul>
-                <li>
-                  <div className="square1"></div>Direct
-                </li>
-                <li>
-                  <div className="square2"></div>Affiliate
-                </li>
-                <li>
-                  <div className="square3"></div>Email
-                </li>
-                <li>
-                  <div className="square4"></div>Other
-                </li>
+                {salesMethods.map((sale) => (
+                  <>
+                    <li>
+                      <div className={sale.square}></div>
+                      {sale.method}
+                    </li>
+                  </>
+                ))}
               </ul>
             </div>
             <div className="revenue">
               <h4>Revenue</h4>
               <ul>
-                <li>$1500</li>
-                <li>$300</li>
-                <li>$1900</li>
-                <li>$180</li>
+                {revenues.map((revenue) => (
+                  <>
+                    <li>{revenue.data}</li>
+                  </>
+                ))}
               </ul>
             </div>
             <div className="value">
               <h4>Value</h4>
               <ul>
-                <li>+20%</li>
-                <li>+13%</li>
-                <li>+20%</li>
-                <li>+2%</li>
+                {revenueRoi.map((revenue) => (
+                  <>
+                    <li>{revenue.roi}</li>
+                  </>
+                ))}
               </ul>
             </div>
           </div>

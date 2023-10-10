@@ -162,6 +162,55 @@ const projects = [
   },
 ];
 
+const salesMethods = [
+  {
+    method: "Direct",
+    square: "square1",
+  },
+  {
+    method: "Affiliate",
+    square: "square2",
+  },
+  {
+    method: "Email",
+    square: "square3",
+  },
+  {
+    method: "Other",
+    square: "square4",
+  },
+];
+
+const revenues = [
+  {
+    data: "$1500",
+  },
+  {
+    data: "$300",
+  },
+  {
+    data: "$1900",
+  },
+  {
+    data: "$180",
+  },
+];
+
+const revenueRoi = [
+  {
+    roi: "+20%",
+  },
+  {
+    roi: "+13%",
+  },
+  {
+    roi: "+20%",
+  },
+  {
+    roi: "+2%",
+  },
+];
+
 const salesData = [
   {
     id: 1,
@@ -213,4 +262,13 @@ const weeklyRevenue = [
   },
 ];
 
-export { cardDetails, notifications, projects, salesData, weeklyRevenue };
+export {
+  cardDetails,
+  notifications,
+  projects,
+  salesData,
+  weeklyRevenue,
+  salesMethods,
+  revenues,
+  revenueRoi,
+};
