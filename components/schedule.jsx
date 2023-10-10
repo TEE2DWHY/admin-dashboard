@@ -66,33 +66,33 @@ const Schedule = () => {
             <div className="sales-amount">
               <h4>Sales</h4>
               <ul>
-                {salesMethods.map((sale) => (
-                  <>
+                {salesMethods.map((sale, index) => (
+                  <div key={index}>
                     <li>
                       <div className={sale.square}></div>
                       {sale.method}
                     </li>
-                  </>
+                  </div>
                 ))}
               </ul>
             </div>
             <div className="revenue">
               <h4>Revenue</h4>
               <ul>
-                {revenues.map((revenue) => (
-                  <>
+                {revenues.map((revenue, index) => (
+                  <div key={index}>
                     <li>{revenue.data}</li>
-                  </>
+                  </div>
                 ))}
               </ul>
             </div>
             <div className="value">
               <h4>Value</h4>
               <ul>
-                {revenueRoi.map((revenue) => (
-                  <>
+                {revenueRoi.map((revenue, index) => (
+                  <div key={index}>
                     <li>{revenue.roi}</li>
-                  </>
+                  </div>
                 ))}
               </ul>
             </div>
