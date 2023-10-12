@@ -12,6 +12,7 @@ import {
 } from "@/data/data";
 import PieChart from "./piechart";
 import Modal from "./modal/modal";
+import CalendarComponent from "../components/calendar";
 const Schedule = () => {
   const [UserData, setUserData] = useState({
     labels: ["Direct", "Affiliate", "Email", "Others"],
@@ -56,7 +57,13 @@ const Schedule = () => {
   return (
     <>
       <div className="schedules">
-        <div className="schedule-container calendar">Calendar</div>
+        <div className="schedule-container calendar">
+          <div className="calendar-header">
+            <div>Calendar</div>
+            <div>...</div>
+          </div>
+          <CalendarComponent />
+        </div>
         <div className="schedule-container weekly-sales">
           <div className="header">
             <span>Weekly</span>
