@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 // styling
 import "../styles/dashboard.css";
 // data
-import { revenueRoi, revenues, salesMethods, weeklyRevenue } from "@/data/data";
+import {
+  revenueRoi,
+  revenues,
+  salesMethods,
+  weeklyRevenue,
+  appointments,
+} from "@/data/data";
 import PieChart from "./piechart";
 import Modal from "./modal/modal";
 const Schedule = () => {
@@ -98,7 +104,23 @@ const Schedule = () => {
             </div>
           </div>
         </div>
-        <div className="schedule-container appointments">Appointment</div>
+        <div className="schedule-container appointments">
+          <div className="header">
+            <div>Appointment</div>
+            <div>...</div>
+          </div>
+          {appointments.map((data, index) => (
+            <div className="details" key={index}>
+              <>
+                <div className="assignment">
+                  <span className="assignment-header"> {data.assignment}</span>
+                  <p>{data.paragraph}</p>
+                </div>
+                <div className="time-span">{data.timeSpan}</div>
+              </>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

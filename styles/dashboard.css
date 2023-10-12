@@ -266,6 +266,29 @@
   color: #257a70;
 }
 
+.appointments .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #6c757d;
+}
+
+.appointments .details {
+  margin: 7% 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.assignment-header {
+  color: #000;
+}
+
+.details .time-span {
+  font-size: 12px;
+  width: 50%;
+}
 /* Latest-Projects */
 .latest-projects {
   margin-top: 3%;

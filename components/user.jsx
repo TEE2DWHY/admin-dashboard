@@ -43,11 +43,11 @@ const User = () => {
             />
           ))}
         </div>
-        <div className="container-2" data-aos="slide-up" aos-duration="2300">
+        <div className="container-2" data-aos="slide-up">
           <Sales />
           <DailyFeed />
         </div>
-        <div data-aos="slide-up" aos-duration="2400">
+        <div data-aos="slide-up">
           <Schedule />
           <LatestProjects />
         </div>

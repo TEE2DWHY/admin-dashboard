@@ -262,6 +262,33 @@ const weeklyRevenue = [
   },
 ];
 
+const appointments = [
+  {
+    assignment: "Chat with Carl and Ashley",
+    paragraph:
+      "Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris...",
+    timeSpan: "2h ago",
+  },
+  {
+    assignment: "Chat with Carl and Ashley",
+    paragraph:
+      "Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris...",
+    timeSpan: "5h ago",
+  },
+  {
+    assignment: "Chat with Carl and Ashley",
+    paragraph:
+      "Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris...",
+    timeSpan: "1h ago",
+  },
+  {
+    assignment: "Chat with Carl and Ashley",
+    paragraph:
+      "Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris...",
+    timeSpan: "3h ago",
+  },
+];
+
 export {
   cardDetails,
   notifications,
@@ -271,4 +298,5 @@ export {
   salesMethods,
   revenues,
   revenueRoi,
+  appointments,
 };
