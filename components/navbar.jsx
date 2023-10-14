@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="nav-right">
         <div>
           <Chat />
-          <span className="indicator">{chatNumber}</span>
+          <span className="indicator">{chatNumber > 10 ? 0 : chatNumber}</span>
         </div>
         <Alarm />
         <img className="country" src={"/images/uk.png"} alt="uk-symbol" />
