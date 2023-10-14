@@ -12,9 +12,10 @@
 
 .search-input {
   padding: 10px 20px;
-  color: #e5e5e5;
+  color: #1b1b1b;
   background-color: #f7f9fc;
   border: none;
+  outline: none;
 }
 
 .nav-right {
