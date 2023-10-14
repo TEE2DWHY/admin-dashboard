@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // styling
 import { Alarm, Chat, Search, Toggle } from "@/icons/icons";
 import "../styles/navbar.css";
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   const [chatNumber, setChatNumber] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,10 +14,13 @@ const Navbar = () => {
       clearInterval(interval);
     };
   }, [chatNumber]);
+
   return (
     <div className="navbar">
       <div className="nav-left">
-        <Toggle />
+        <div className="toggle-sidebar" onClick={toggleSidebar}>
+          <Toggle />
+        </div>
         <input
           className="search-input"
           type="text"

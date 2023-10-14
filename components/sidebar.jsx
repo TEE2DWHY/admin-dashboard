@@ -1,7 +1,7 @@
 import "../styles/sidebar.css";
-const Sidebar = () => {
+const Sidebar = ({ isVisible }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isVisible ? "" : "hide-sidebar"}`}>
       <div className="sidebar-container pages">
         <ul>
           <li className="logo"> AppsStack.</li>

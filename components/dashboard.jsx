@@ -5,11 +5,11 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 import User from "./user";
 
-const Dashboard = () => {
+const Dashboard = ({ click }) => {
   return (
     <>
       <div className="dashboard-contents">
-        <Navbar />
+        <Navbar toggleSidebar={click} />
         <User />
         <Footer />
       </div>
