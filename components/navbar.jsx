@@ -4,8 +4,13 @@ import { useEffect, useState } from "react";
 import { Alarm, ArrowDown, Chat, Search, Toggle } from "@/icons/icons";
 import "../styles/navbar.css";
 import CountryModal from "./modal/countryModal";
+import ProfileModal from "./modal/profileModal";
 const Navbar = ({ toggleSidebar }) => {
+  // State Variables
   const [chatNumber, setChatNumber] = useState(0);
+  const [showCountryModal, setShowCountryNodal] = useState(false);
+  const [showProfileModal, setShowProfileModal] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setChatNumber(chatNumber + 1);
@@ -15,8 +20,6 @@ const Navbar = ({ toggleSidebar }) => {
       clearInterval(interval);
     };
   }, [chatNumber]);
-
-  const [showCountryModal, setShowCountryNodal] = useState(false);
 
   return (
     <div className="navbar">
@@ -52,8 +55,16 @@ const Navbar = ({ toggleSidebar }) => {
         )}
         <img className="avatar" src={"/images/avatar-5.jpeg"} alt="avatar" />
         <p>
-          Ashley Briggs <ArrowDown />
+          Ashley Briggs
+          <ArrowDown
+            showProfileModal={() => setShowProfileModal(!showProfileModal)}
+          />
         </p>
+        {showProfileModal && (
+          <ProfileModal
+            hideProfileModal={() => setShowProfileModal(!setShowProfileModal)}
+          />
+        )}
       </div>
     </div>
   );

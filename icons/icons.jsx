@@ -20,14 +20,18 @@ export const Toggle = () => {
   );
 };
 
-export const ArrowDown = () => {
+export const ArrowDown = ({ showProfileModal }) => {
   return (
-    <FontAwesomeIcon
-      icon={faChevronDown}
-      style={{
-        fontSize: "10px",
-      }}
-    />
+    <span onClick={showProfileModal}>
+      <FontAwesomeIcon
+        icon={faChevronDown}
+        style={{
+          fontSize: "12px",
+          marginLeft: "5px",
+          fontWeight: "900",
+        }}
+      />
+    </span>
   );
 };
 
