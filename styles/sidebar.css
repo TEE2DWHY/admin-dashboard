@@ -34,4 +34,5 @@ li {
 
 .hide-sidebar {
   display: none;
+  transition: all 0.3s ease-out;
 }

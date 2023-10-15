@@ -6,7 +6,12 @@ export const Toggle = () => {
   return (
     <FontAwesomeIcon
       icon={faBars}
-      style={{ marginRight: "20px", cursor: "pointer" }}
+      style={{
+        marginRight: "20px",
+        cursor: "pointer",
+        fontSize: "22px",
+        color: "#1b1b1b",
+      }}
     />
   );
 };

@@ -23,3 +23,28 @@
   color: #1659c7;
   transition: all 0.8s ease-in;
 }
+
+.country-modal-container {
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  padding: 3px 15px;
+  border: 1px solid #f4f1f1;
+  border-radius: 5px;
+  width: 100px;
+  height: 150px;
+  z-index: 9999;
+}
+
+.country-modal li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.country-img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
