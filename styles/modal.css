@@ -36,11 +36,13 @@
   z-index: 9999;
 }
 
+/* Country Modal  */
 .country-modal li {
   display: flex;
   align-items: center;
   padding: 8px 0;
   font-size: 14px;
+  color: #6c757d;
 }
 
 .country-img {
@@ -48,3 +50,5 @@
   height: 15px;
   margin-right: 8px;
 }
+
+/* Profile Modal */
