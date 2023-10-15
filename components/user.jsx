@@ -8,7 +8,7 @@ import Sales from "./sales";
 import DailyFeed from "./dailyfeed";
 import Schedule from "./schedule";
 import LatestProjects from "./latestprojects";
-import { Calendar, Filter, Reload } from "@/icons/icons";
+import { ArrowDown, Calendar, Filter, Reload } from "@/icons/icons";
 const CardIntro = () => {
   return (
     <div className="welcome-message">
@@ -34,7 +34,7 @@ const User = () => {
           <div className="dashboard-col2">
             <h4 className="today">
               <Calendar />
-              Today
+              Today <ArrowDown />
             </h4>
             <Filter />
             <Reload />

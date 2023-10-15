@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 // styling
-import { Alarm, Chat, Search, Toggle } from "@/icons/icons";
+import { Alarm, ArrowDown, Chat, Search, Toggle } from "@/icons/icons";
 import "../styles/navbar.css";
 import CountryModal from "./modal/countryModal";
 const Navbar = ({ toggleSidebar }) => {
@@ -16,7 +16,7 @@ const Navbar = ({ toggleSidebar }) => {
     };
   }, [chatNumber]);
 
-  const [showCountryModal, setShowCountryModal] = useState(false);
+  const [showCountryModal, setShowCountryNodal] = useState(false);
 
   return (
     <div className="navbar">
@@ -43,15 +43,17 @@ const Navbar = ({ toggleSidebar }) => {
           className="country"
           src={"/images/uk.png"}
           alt="uk-symbol"
-          onMouseOver={() => setShowCountryModal(!showCountryModal)}
+          onMouseOver={() => setShowCountryNodal(!showCountryModal)}
         />
         {showCountryModal && (
           <CountryModal
-            hideCountryModal={() => setShowCountryModal(!showCountryModal)}
+            hideCountryModal={() => setShowCountryNodal(!showCountryModal)}
           />
         )}
         <img className="avatar" src={"/images/avatar-5.jpeg"} alt="avatar" />
-        <p>Ashley Briggs</p>
+        <p>
+          Ashley Briggs <ArrowDown />
+        </p>
       </div>
     </div>
   );

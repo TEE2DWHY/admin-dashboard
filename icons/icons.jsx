@@ -1,6 +1,10 @@
 // These icons are generated from font awesome(https://fontawesome.com)
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faChevronDown,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const Toggle = () => {
   return (
@@ -11,6 +15,17 @@ export const Toggle = () => {
         cursor: "pointer",
         fontSize: "22px",
         color: "#1b1b1b",
+      }}
+    />
+  );
+};
+
+export const ArrowDown = () => {
+  return (
+    <FontAwesomeIcon
+      icon={faChevronDown}
+      style={{
+        fontSize: "10px",
       }}
     />
   );
