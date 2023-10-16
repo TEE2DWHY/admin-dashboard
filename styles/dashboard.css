@@ -46,11 +46,12 @@
   padding: 20px;
   color: #fff;
   border-radius: 7px;
-  height: 140.94px;
   font-weight: 900;
   cursor: pointer;
-  width: 200px;
-  font-size: 14px;
+  width: fit-content;
+  height: 140.94px;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 .customer-support {
@@ -72,6 +73,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin: 0 20px;
 }
 
 .card-col-1 {

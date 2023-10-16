@@ -14,7 +14,7 @@ const cardDetails = [
   {
     figure: "$ 18.700",
     info: "Total Revenue",
-    roi: "+5.35%",
+    roi: "+2.35%",
     timeFrame: "Since last week",
   },
 ];
