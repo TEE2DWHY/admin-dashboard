@@ -53,7 +53,11 @@ const Navbar = ({ toggleSidebar }) => {
             hideCountryModal={() => setShowCountryNodal(!showCountryModal)}
           />
         )}
-        <img className="avatar" src={"/images/avatar-5.jpeg"} alt="avatar" />
+        <img
+          className="avatar user-img"
+          src={"/images/avatar-5.jpeg"}
+          alt="avatar"
+        />
         <p className="username">
           Ashley Briggs
           <ArrowDown
