@@ -4,12 +4,12 @@
   }
 
   body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
 
   /* Sidebar */
   .sidebar {
-    display: none;
+    display: hidden;
   }
 
   /* Navbar */
