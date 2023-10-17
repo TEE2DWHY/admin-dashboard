@@ -42,7 +42,7 @@ const User = () => {
                 <ArrowDown />
               </span> */}
             </h4>
-            {showTodayModal && <Modal />}
+            {/* {showTodayModal && <Modal />} */}
             <Filter />
             <Reload />
           </div>
