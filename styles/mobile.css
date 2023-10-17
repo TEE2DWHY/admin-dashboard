@@ -1,80 +1,82 @@
-html {
-  scroll-behavior: smooth;
-}
+@media (max-width: 820px) {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  overflow-x: hidden;
-}
+  body {
+    /* overflow-x: hidden; */
+  }
 
-/* Sidebar */
-.sidebar {
-  display: none;
-}
+  /* Sidebar */
+  .sidebar {
+    display: none;
+  }
 
-/* Dashboard */
-.dashboard-contents {
-  width: 100%;
-}
+  /* Navbar */
+  .search-input {
+    margin-right: 15px;
+  }
 
-/* Navbar */
-/* .navbar {
-  width: 100%;
-} */
+  /* Dashboard */
+  .dashboard-contents {
+    width: 100%;
+  }
 
-.user-img {
-  display: none;
-}
+  .user-img {
+    display: none;
+  }
 
-.username {
-  display: none;
-}
+  .username {
+    display: none;
+  }
 
-/* Card */
-.card {
-  flex-direction: column;
-}
+  /* Card */
+  .card {
+    flex-direction: column;
+  }
 
-.card-col-2 {
-  margin: auto;
-}
+  .card-col-2 {
+    margin: auto;
+  }
 
-.welcome-message,
-.cards {
-  width: 100%;
-  margin: 10px 0;
-}
+  .welcome-message,
+  .cards {
+    width: 90%;
+    margin: 10px 0;
+  }
 
-/* Dashboard Container */
-.container-2 {
-  flex-direction: column;
-}
+  /* Dashboard Container */
+  .container-2 {
+    flex-direction: column;
+  }
 
-.sales,
-.daily-feed {
-  width: 100%;
-  margin: 10px 0;
-}
+  .sales,
+  .daily-feed {
+    width: 80%;
+    margin: 10px 0;
+  }
 
-.sales {
-  height: fit-content;
-}
+  .sales {
+    height: fit-content;
+  }
 
-/* Schedules */
-.schedules {
-  flex-direction: column;
-}
+  /* Schedules */
+  .schedules {
+    flex-direction: column;
+  }
 
-.schedule-container {
-  width: 100%;
-  margin: 10px 0;
-}
+  .schedule-container {
+    width: 80%;
+    margin: 10px 0;
+  }
 
-/* Latest Projects */
-table thead tr th:nth-child(2),
-table thead tr th:nth-child(3),
-table thead tr th:nth-child(5),
-table tbody tr td:nth-child(2),
-table tbody tr td:nth-child(3),
-table tbody tr td:nth-child(5) {
-  display: none;
+  /* Latest Projects */
+  table thead tr th:nth-child(2),
+  table thead tr th:nth-child(3),
+  table thead tr th:nth-child(5),
+  table tbody tr td:nth-child(2),
+  table tbody tr td:nth-child(3),
+  table tbody tr td:nth-child(5) {
+    display: none;
+  }
 }
