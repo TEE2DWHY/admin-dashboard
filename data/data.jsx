@@ -1,21 +1,27 @@
+//  component
+import { DollarIcon, Orders } from "../icons/icons";
+
 const cardDetails = [
   {
     figure: "$ 24.300",
     info: "Total Earnings",
     roi: "+5.35%",
     timeFrame: "Since last week",
+    img: <DollarIcon />,
   },
   {
     figure: "$ 43",
     info: "Pending Orders",
     roi: "-4.25%",
     timeFrame: "Since last week",
+    img: <Orders />,
   },
   {
     figure: "$ 18.700",
     info: "Total Revenue",
     roi: "+2.35%",
     timeFrame: "Since last week",
+    img: <DollarIcon />,
   },
 ];
 

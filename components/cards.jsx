@@ -1,7 +1,6 @@
 // styling
 import "../styles/dashboard.css";
-import { DollarIcon } from "@/icons/icons";
-const Cards = ({ figure, info, roi, timeFrame }) => {
+const Cards = ({ figure, info, roi, timeFrame, image }) => {
   return (
     <>
       <div className="cards">
@@ -11,9 +10,7 @@ const Cards = ({ figure, info, roi, timeFrame }) => {
           <span className="roi-container">{roi}</span>
           <p className="time-frame">{timeFrame}</p>
         </div>
-        <div className="card-col-2">
-          <DollarIcon />
-        </div>
+        <div className="card-col-2">{image}</div>
       </div>
     </>
   );

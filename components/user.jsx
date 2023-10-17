@@ -9,6 +9,8 @@ import DailyFeed from "./dailyfeed";
 import Schedule from "./schedule";
 import LatestProjects from "./latestprojects";
 import { ArrowDown, Calendar, Filter, Reload } from "@/icons/icons";
+import Modal from "./modal/modal";
+import { useState } from "react";
 const CardIntro = () => {
   return (
     <div className="welcome-message">
@@ -26,6 +28,7 @@ const CardIntro = () => {
 };
 
 const User = () => {
+  const [showTodayModal, setShowTodayModal] = useState(false);
   return (
     <>
       <div className="user">
@@ -34,8 +37,12 @@ const User = () => {
           <div className="dashboard-col2">
             <h4 className="today">
               <Calendar />
-              Today <ArrowDown />
+              Today
+              <span onClick={() => setShowTodayModal(!showTodayModal)}>
+                <ArrowDown />
+              </span>
             </h4>
+            {showTodayModal && <Modal />}
             <Filter />
             <Reload />
           </div>
@@ -49,6 +56,7 @@ const User = () => {
               info={cards.info}
               roi={cards.roi}
               timeFrame={cards.timeFrame}
+              image={cards.img}
             />
           ))}
         </div>

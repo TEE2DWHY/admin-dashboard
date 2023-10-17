@@ -6,3 +6,10 @@ canvas {
   width: 100% !important;
   height: 100% !important;
 }
+
+/* Mobile */
+/* @media (max-width: 820px) {
+  .dashboard {
+    flex-direction: column;
+  }
+} */
