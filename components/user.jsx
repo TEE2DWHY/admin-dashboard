@@ -9,8 +9,8 @@ import DailyFeed from "./dailyfeed";
 import Schedule from "./schedule";
 import LatestProjects from "./latestprojects";
 import { ArrowDown, Calendar, Filter, Reload } from "@/icons/icons";
-import Modal from "./modal/modal";
-import { useState } from "react";
+// import Modal from "./modal/modal";
+// import { useState } from "react";
 const CardIntro = () => {
   return (
     <div className="welcome-message">
@@ -38,9 +38,9 @@ const User = () => {
             <h4 className="today">
               <Calendar />
               Today
-              {/* <span onClick={() => setShowTodayModal(!showTodayModal)}>
-                <ArrowDown />
-              </span> */}
+              {/* <span onClick={() => setShowTodayModal(!showTodayModal)}> */}
+              <ArrowDown />
+              {/* </span> */}
             </h4>
             {/* {showTodayModal && <Modal />} */}
             <Filter />
