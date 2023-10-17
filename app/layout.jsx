@@ -28,8 +28,6 @@ export default function RootLayout({ children }) {
 
         {/* Include Nunito font */}
         <link rel="stylesheet" href={nunito.href} />
-
-        {/* Add other meta tags as needed */}
       </Head>
       <body className={nunito.className}>{children}</body>
     </html>
