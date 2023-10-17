@@ -46,7 +46,7 @@ const Navbar = ({ toggleSidebar }) => {
           className="country"
           src={"/images/uk.png"}
           alt="uk-symbol"
-          onMouseOver={() => setShowCountryNodal(!showCountryModal)}
+          onClick={() => setShowCountryNodal(!showCountryModal)}
         />
         {showCountryModal && (
           <CountryModal
