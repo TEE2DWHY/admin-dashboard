@@ -7,9 +7,9 @@ canvas {
   height: 100% !important;
 }
 
+.show-sidebar {
+  display: flex;
+}
 /* Mobile */
-/* @media (max-width: 820px) {
-  .dashboard {
-    flex-direction: column;
-  }
-} */
+@media (max-width: 820px) {
+}

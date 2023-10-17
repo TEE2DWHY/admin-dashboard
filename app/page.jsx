@@ -21,7 +21,7 @@ const Home = () => {
     <Animate>
       <div className="dashboard">
         {/* <Skeleton active> */}
-        <Sidebar isVisible={isSidebarVisible} />
+        {isSidebarVisible && <Sidebar />}
         <Dashboard click={toggleSidebar} />
         {/* </Skeleton> */}
       </div>

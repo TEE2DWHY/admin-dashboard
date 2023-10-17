@@ -1,9 +1,9 @@
 // styling
 import "../styles/sidebar.css";
 import "../styles/mobile.css";
-const Sidebar = ({ isVisible }) => {
+const Sidebar = () => {
   return (
-    <div className={`sidebar ${isVisible ? "" : "hide-sidebar"}`}>
+    <div className="sidebar">
       <div className="sidebar-container pages">
         <ul>
           <li className="logo"> AppsStack.</li>
