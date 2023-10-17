@@ -54,7 +54,7 @@ const Navbar = ({ toggleSidebar }) => {
           />
         )}
         <img className="avatar" src={"/images/avatar-5.jpeg"} alt="avatar" />
-        <p>
+        <p className="username">
           Ashley Briggs
           <ArrowDown
             showProfileModal={() => setShowProfileModal(!showProfileModal)}

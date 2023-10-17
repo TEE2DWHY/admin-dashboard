@@ -1,4 +1,6 @@
+// styling
 import "../styles/sidebar.css";
+import "../styles/mobile.css";
 const Sidebar = ({ isVisible }) => {
   return (
     <div className={`sidebar ${isVisible ? "" : "hide-sidebar"}`}>
