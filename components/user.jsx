@@ -28,7 +28,7 @@ const CardIntro = () => {
 };
 
 const User = () => {
-  const [showTodayModal, setShowTodayModal] = useState(false);
+  // const [showTodayModal, setShowTodayModal] = useState(false);
   return (
     <>
       <div className="user">
@@ -38,9 +38,9 @@ const User = () => {
             <h4 className="today">
               <Calendar />
               Today
-              <span onClick={() => setShowTodayModal(!showTodayModal)}>
+              {/* <span onClick={() => setShowTodayModal(!showTodayModal)}>
                 <ArrowDown />
-              </span>
+              </span> */}
             </h4>
             {showTodayModal && <Modal />}
             <Filter />
