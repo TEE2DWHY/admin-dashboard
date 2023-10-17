@@ -68,3 +68,7 @@
   color: #6c757d;
   font-size: 14px;
 }
+
+.profile-modal li:hover {
+  opacity: 0.8;
+}
