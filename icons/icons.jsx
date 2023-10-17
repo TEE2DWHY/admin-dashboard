@@ -39,7 +39,7 @@ export const Search = () => {
   return (
     <FontAwesomeIcon
       icon={faMagnifyingGlass}
-      style={{ marginLeft: "-30px", cursor: "pointer" }}
+      style={{ marginLeft: "-35px", cursor: "pointer" }}
     />
   );
 };
