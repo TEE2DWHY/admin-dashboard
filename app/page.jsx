@@ -6,23 +6,22 @@ import Sidebar from "@/components/sidebar";
 import Animate from "@/libs/Animate";
 
 const Home = () => {
-  const [isSidebarVisible, setSidebarVisible] = useState(
-    window.innerWidth > 820
-  );
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
-    const dashboardHeader = document.querySelector(".dashboard-contents");
-    dashboardHeader.classList.toggle("full-width");
   };
 
   useEffect(() => {
+    // Check the window width after the component has mounted (in the browser)
     const handleResize = () => {
       setSidebarVisible(window.innerWidth > 820);
     };
 
+    // Add the event listener when the component mounts
     window.addEventListener("resize", handleResize);
 
+    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
