@@ -1,9 +1,12 @@
 // styling
 import "../styles/sidebar.css";
 import "../styles/mobile.css";
-const Sidebar = () => {
+const Sidebar = ({ closeSideBar }) => {
   return (
     <div className="sidebar">
+      <span className="close-sidebar" onClick={closeSideBar}>
+        &#x2718;
+      </span>
       <div className="sidebar-container pages">
         <ul>
           <li className="logo"> AppsStack.</li>

@@ -1,15 +1,14 @@
 "use client";
-import { useDebugValue, useEffect, useState } from "react";
-// styling
+import { useEffect, useState } from "react";
 import Dashboard from "@/components/dashboard";
 import "../styles/home.css";
-// components
 import Sidebar from "@/components/sidebar";
 import Animate from "@/libs/Animate";
-// import { Skeleton } from "antd";
 
 const Home = () => {
-  const [isSidebarVisible, setSidebarVisible] = useState(true);
+  const [isSidebarVisible, setSidebarVisible] = useState(
+    window.innerWidth > 820
+  );
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
@@ -17,13 +16,26 @@ const Home = () => {
     dashboardHeader.classList.toggle("full-width");
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setSidebarVisible(window.innerWidth > 820);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  console.log(isSidebarVisible);
   return (
     <Animate>
       <div className="dashboard">
-        {/* <Skeleton active> */}
-        {isSidebarVisible && <Sidebar />}
+        {isSidebarVisible && (
+          <Sidebar closeSideBar={() => setSidebarVisible(!isSidebarVisible)} />
+        )}
         <Dashboard click={toggleSidebar} />
-        {/* </Skeleton> */}
       </div>
     </Animate>
   );
