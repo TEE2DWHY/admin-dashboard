@@ -8,7 +8,9 @@ const Sidebar = () => {
         <ul>
           <li className="logo"> AppsStack.</li>
           <li>Pages</li>
-          <li>Dashboards</li>
+          <li>
+            Dashboards <span className="sidebar-ads">5</span>
+          </li>
           <li>Defaults</li>
           <li>Analytics</li>
           <li>Saas</li>
@@ -20,7 +22,9 @@ const Sidebar = () => {
         <ul>
           <li>Tools & Components</li>
           <li>UI Elements</li>
-          <li>Icons</li>
+          <li>
+            Icons <span className="sidebar-ads">1500+</span>
+          </li>
           <li>Forms</li>
           <li>Tables</li>
         </ul>
@@ -30,7 +34,9 @@ const Sidebar = () => {
           <li>Plugins and Addons</li>
           <li>Form Plugins</li>
           <li>Advanced Tables</li>
-          <li>Charts</li>
+          <li>
+            Charts <span className="sidebar-ads">New</span>
+          </li>
           <li>Notifications</li>
           <li>Maps</li>
           <li>Calendar</li>
