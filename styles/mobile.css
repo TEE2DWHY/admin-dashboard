@@ -16,6 +16,7 @@
   }
 
   .close-sidebar {
+    display: block;
     margin-right: 80%;
     margin-top: 3%;
     font-size: 20px;

@@ -28,7 +28,6 @@ const Home = () => {
     };
   }, []);
 
-  console.log(isSidebarVisible);
   return (
     <Animate>
       <div className="dashboard">
