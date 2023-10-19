@@ -79,9 +79,13 @@
   table tbody tr td:nth-child(5) {
     display: none;
   }
-}
 
-/* Footer */
-footer {
-  width: 90%;
+  /* Footer */
+  footer {
+    width: 90%;
+  }
+
+  footer .left .left-container {
+    flex-direction: column;
+  }
 }
