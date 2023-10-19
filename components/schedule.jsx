@@ -10,9 +10,9 @@ import {
   weeklyRevenue,
   appointments,
 } from "@/data/data";
-import PieChart from "./piechart";
+import PieChart from "../libs/PieChart";
 import Modal from "./modal/modal";
-import CalendarComponent from "../components/calendar";
+import CalendarComponent from "../libs/Calendar";
 const Schedule = () => {
   const [UserData, setUserData] = useState({
     labels: ["Direct", "Affiliate", "Email", "Others"],

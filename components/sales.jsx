@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "../styles/dashboard.css";
 // data
 import { salesData } from "@/data/data";
-import Barchart from "./barchart";
+import Barchart from "@/libs/BarChart";
 import Modal from "./modal/modal";
 
 const Sales = () => {
