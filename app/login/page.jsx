@@ -51,7 +51,7 @@ const Login = () => {
           <button type="submit">Log In</button>
           <p className="alt-container">
             Don't have an Account?
-            <a href="./sign-up">
+            <a href='./sign-up"'>
               <span className="alt-text">Sign Up.</span>
             </a>
           </p>
