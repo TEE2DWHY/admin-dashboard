@@ -6,9 +6,7 @@ const SignUp = () => {
       <div className="sign-up">
         <div className="signup-header">
           <h1>Get Started</h1>
-          <p>
-            Start creating the best possible user experience for you customers.
-          </p>
+          <p>Welcome to AppStack's Dashboard.</p>
         </div>
         <form>
           <div>
