@@ -113,8 +113,30 @@
   footer .left .left-container {
     flex-direction: column;
   }
+
   /* Sign up */
   .auth-container {
     width: 90%;
+  }
+
+  .auth-container label {
+    font-size: 16px;
+  }
+
+  .auth-container form {
+    padding: 40px 30px;
+  }
+
+  .auth-container form input {
+    padding: 10px 20px;
+    width: 80%;
+  }
+
+  .auth-container form button {
+    margin: 20px auto;
+  }
+
+  .auth-container .alt-container {
+    font-size: 14px;
   }
 }

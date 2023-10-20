@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <>
       <div className="auth-container">
-        <div className="signup-header">
+        <div className="auth-header">
           <h2>Login</h2>
         </div>
         <form onSubmit={handleSubmit}>
@@ -52,7 +52,7 @@ const Login = () => {
           <p className="alt-container">
             Don't have an Account?
             <a href="./sign-up">
-              <span className="alt-text">Sign Up.</span>
+              <span className="alt-text"> Sign Up.</span>
             </a>
           </p>
         </form>

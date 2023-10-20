@@ -31,7 +31,7 @@ const SignUp = () => {
   return (
     <>
       <div className="auth-container">
-        <div className="signup-header">
+        <div className="auth-header">
           <h2>Get Started</h2>
           <p>Welcome to AppStack's Dashboard.</p>
         </div>
@@ -89,7 +89,9 @@ const SignUp = () => {
           <button type="submit">Sign Up</button>
           <p className="alt-container">
             Already have an Account?
-            <span className="alt-text">Log in.</span>
+            <a href="./login">
+              <span className="alt-text"> Log in.</span>
+            </a>
           </p>
         </form>
       </div>
