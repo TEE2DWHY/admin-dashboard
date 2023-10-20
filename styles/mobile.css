@@ -24,6 +24,10 @@
     cursor: pointer;
   }
 
+  .sidebar-container ul li {
+    font-size: 20px;
+  }
+
   /* Navbar */
   .search-input {
     margin-right: 8px;
