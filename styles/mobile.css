@@ -98,6 +98,14 @@
     font-size: 12px;
   }
 
+  footer .left {
+    flex: 3;
+  }
+
+  footer .right {
+    flex: 2;
+  }
+
   footer .left .left-container {
     flex-direction: column;
   }
