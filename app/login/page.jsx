@@ -28,7 +28,7 @@ const Login = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="email">Email</label>
+            <label>Email</label>
             <input
               type="email"
               placeholder="JohnDoe@gmail.com"
@@ -38,7 +38,7 @@ const Login = () => {
             />
           </div>
           <div>
-            <label htmlFor="password">Password</label>
+            <label>Password</label>
             <input
               type="password"
               placeholder="Password"
@@ -49,10 +49,10 @@ const Login = () => {
           </div>
 
           <button type="submit">Log In</button>
-          <p className="login-container">
+          <p className="alt-container">
             Don't have an Account?
             <a href="./sign-up">
-              <span className="login-text">Sign Up.</span>
+              <span className="alt-text">Sign Up.</span>
             </a>
           </p>
         </form>

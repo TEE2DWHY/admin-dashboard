@@ -37,7 +37,7 @@ const SignUp = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="firstName">First Name </label>
+            <label>First Name </label>
             <input
               type="text"
               placeholder="FirstName"
@@ -47,7 +47,7 @@ const SignUp = () => {
             />
           </div>
           <div>
-            <label htmlFor="lastName">Last Name</label>
+            <label>Last Name</label>
             <input
               type="text"
               placeholder="LastName"
@@ -57,7 +57,7 @@ const SignUp = () => {
             />
           </div>
           <div>
-            <label htmlFor="email">Email</label>
+            <label>Email</label>
             <input
               type="email"
               placeholder="JohnDoe@gmail.com"
@@ -67,7 +67,7 @@ const SignUp = () => {
             />
           </div>
           <div>
-            <label htmlFor="password">Password</label>
+            <label>Password</label>
             <input
               type="password"
               placeholder="Password"
@@ -77,7 +77,7 @@ const SignUp = () => {
             />
           </div>
           <div>
-            <label htmlFor="confirmPassword">Confirm Password</label>
+            <label>Confirm Password</label>
             <input
               type="password"
               placeholder="Confirm Password"
@@ -87,8 +87,9 @@ const SignUp = () => {
             />
           </div>
           <button type="submit">Sign Up</button>
-          <p className="login-container">
-            Already have an Account? <span className="login-text">Log in.</span>
+          <p className="alt-container">
+            Already have an Account?
+            <span className="alt-text">Log in.</span>
           </p>
         </form>
       </div>
