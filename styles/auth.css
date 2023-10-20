@@ -4,9 +4,11 @@ body {
   justify-content: center;
   height: 100vh;
   background-color: #f7f9fc;
-  padding: 20px;
 }
 /* Sign Up */
+.sign-up {
+  width: 30%;
+}
 .signup-header {
   text-align: center;
 }
@@ -16,6 +18,11 @@ form {
   padding: 20px 30px;
   background-color: #fff;
 }
+
+label {
+  font-size: 14px;
+}
+
 input {
   display: block;
   width: 90%;
@@ -35,4 +42,27 @@ form button {
   margin: 15px auto 10px auto;
   padding: 10px 20px;
   border: none;
+  background-color: #1659c7;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all 2s ease-in;
+}
+
+.login-container {
+  text-align: center;
+  font-size: 16px;
+}
+
+.login-text {
+  color: #1659c7;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 900;
 }

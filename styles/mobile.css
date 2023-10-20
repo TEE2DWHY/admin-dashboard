@@ -113,4 +113,8 @@
   footer .left .left-container {
     flex-direction: column;
   }
+  /* Sign up */
+  .sign-up {
+    width: 90%;
+  }
 }
