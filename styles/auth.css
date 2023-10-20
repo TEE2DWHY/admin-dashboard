@@ -6,7 +6,7 @@ body {
   background-color: #f7f9fc;
 }
 /* Sign Up */
-.sign-up {
+.auth-container {
   width: 30%;
 }
 .signup-header {

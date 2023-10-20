@@ -114,7 +114,7 @@
     flex-direction: column;
   }
   /* Sign up */
-  .sign-up {
+  .auth-container {
     width: 90%;
   }
 }
