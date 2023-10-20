@@ -3,7 +3,7 @@ import "../styles/sidebar.css";
 import "../styles/mobile.css";
 const Sidebar = ({ closeSideBar }) => {
   return (
-    <div className="sidebar">
+    <div className="sidebar" data-aos="fade-right" data-aos-duration="800">
       <span className="close-sidebar" onClick={closeSideBar}>
         &#x2718;
       </span>

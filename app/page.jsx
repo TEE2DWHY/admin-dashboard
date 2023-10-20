@@ -22,8 +22,6 @@ const Home = () => {
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
-    const dashboardHeader = document.querySelector(".dashboard-contents");
-    dashboardHeader.classList.toggle("full-width");
   };
 
   return (
