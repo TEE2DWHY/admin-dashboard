@@ -147,6 +147,10 @@
     font-size: 16px;
   }
 
+  .auth-container form input:focus {
+    outline-color: #000;
+  }
+
   .auth-container form button {
     margin: 20px auto;
     padding: 10px 25px;
