@@ -28,7 +28,7 @@ const ProfileModal = ({ hideProfileModal }) => {
             <Help />
             Help
           </li>
-          <a href="./logout">
+          <a href="./login">
             <li>
               <SignOut />
               Sign Out

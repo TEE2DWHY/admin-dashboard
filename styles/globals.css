@@ -2,9 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
