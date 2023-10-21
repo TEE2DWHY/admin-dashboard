@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import authFetch from "@/config/authFetch";
+
 // styling
 import "../../styles/auth.css";
 import "../../styles/mobile.css";
@@ -18,14 +20,19 @@ const SignUp = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { password, confirmPassword } = formData;
     if (password !== confirmPassword) {
       alert("Password Mismatch!");
       return;
     }
-    console.log(formData);
+    try {
+      const response = await authFetch.post("/signup", formData);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
