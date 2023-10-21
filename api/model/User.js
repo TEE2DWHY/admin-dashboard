@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, "Field cannot be empty"],
-    minlength: [8, "Password cannot be less than 8"],
+    minLength: 8,
   },
 });
 

@@ -1,7 +1,8 @@
 const { StatusCodes } = require("http-status-codes");
+const asyncWrapper = require("../middleware/asyncWrapper");
 const User = require("../model/User");
-
-const signup = async (req, res) => {
+const bcrypt = require("bcrypt");
+const signup = asyncWrapper(async (req, res) => {
   const { password, confirmPassword } = req.body;
   if (!confirmPassword) {
     return res.status(StatusCodes.BAD_REQUEST).json({
@@ -13,22 +14,17 @@ const signup = async (req, res) => {
       msg: "Password and confirm password does not match.",
     });
   }
-  try {
-    const user = await User.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: req.body.password,
-    });
-    res.status(StatusCodes.CREATED).json({
-      msg: `user with account name ${user.firstName} is created. Proceed to login`,
-    });
-  } catch (err) {
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-      msg: err.message,
-    });
-  }
-};
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const user = await User.create({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    password: hashedPassword,
+  });
+  res.status(StatusCodes.CREATED).json({
+    msg: `user with account name ${user.firstName} is created. Proceed to login`,
+  });
+});
 
 const login = (req, res) => {
   res.status(200).json({
