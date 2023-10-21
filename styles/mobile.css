@@ -119,6 +119,12 @@
     width: 90%;
   }
 
+  .auth-container form {
+    border: 5px solid #fff;
+    position: relative;
+    z-index: 99999;
+  }
+
   .sign-up form {
     padding: 15px 30px !important;
   }
