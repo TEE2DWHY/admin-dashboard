@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="auth-container">
+      <div className="auth-container login">
         <div className="auth-header">
           <h2>Login</h2>
         </div>

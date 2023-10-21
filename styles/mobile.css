@@ -119,6 +119,10 @@
     width: 90%;
   }
 
+  .login {
+    margin-top: -50px;
+  }
+
   .auth-container label {
     font-size: 16px;
   }
@@ -128,8 +132,9 @@
   }
 
   .auth-container form input {
-    padding: 10px 20px;
+    padding: 15px 30px;
     width: 80%;
+    font-size: 16px;
   }
 
   .auth-container form button {
