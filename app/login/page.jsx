@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 // styling
-import "../../../styles/auth.css";
-import "../../../styles/mobile.css";
+import "../../styles/auth.css";
+import "../../styles/mobile.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +51,7 @@ const Login = () => {
           <button type="submit">Log In</button>
           <p className="alt-container">
             Don't have an Account?
-            <a href="./auth/sign-up">
+            <a href="./sign-up">
               <span className="alt-text"> Sign Up.</span>
             </a>
           </p>
