@@ -119,6 +119,10 @@
     width: 90%;
   }
 
+  .sign-up form {
+    padding: 15px 30px !important;
+  }
+
   .login {
     margin-top: -50px;
   }

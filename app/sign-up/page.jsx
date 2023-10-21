@@ -30,7 +30,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="auth-container">
+      <div className="auth-container sign-up">
         <div className="auth-header">
           <h2>Get Started</h2>
           <p>Welcome to AppStack's Dashboard.</p>
