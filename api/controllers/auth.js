@@ -2,6 +2,7 @@ const { StatusCodes } = require("http-status-codes");
 const asyncWrapper = require("../middleware/asyncWrapper");
 const User = require("../model/User");
 const bcrypt = require("bcrypt");
+
 const signup = asyncWrapper(async (req, res) => {
   const { password, confirmPassword } = req.body;
   if (!confirmPassword) {
@@ -26,10 +27,22 @@ const signup = asyncWrapper(async (req, res) => {
   });
 });
 
-const login = (req, res) => {
-  res.status(200).json({
-    msg: "login is successful.",
+const login = asyncWrapper(async (req, res) => {
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return res.status(StatusCodes.NOT_FOUND).json({
+      msg: `User does not exist.`,
+    });
+  }
+  const passwordMatch = await bcrypt.compare(req.body.password, user.password);
+  if (!passwordMatch) {
+    return res.status(StatusCodes.UNAUTHORIZED).json({
+      msg: "Invalid credentials.",
+    });
+  }
+  res.status(StatusCodes.OK).json({
+    msg: "Login is Successful.",
   });
-};
+});
 
 module.exports = { signup, login };

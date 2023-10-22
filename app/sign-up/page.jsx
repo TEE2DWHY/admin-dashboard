@@ -39,7 +39,7 @@ const SignUp = () => {
     <>
       <div className="auth-container sign-up">
         <div className="auth-header">
-          <h2>Get Started</h2>
+          <h2 className="header">Get Started</h2>
           <p>Welcome to AppStack's Dashboard.</p>
         </div>
         <form onSubmit={handleSubmit}>

@@ -24,7 +24,7 @@ const Login = () => {
     <>
       <div className="auth-container login">
         <div className="auth-header">
-          <h2>Login</h2>
+          <h2 className="header">Login</h2>
         </div>
         <form onSubmit={handleSubmit}>
           <div>

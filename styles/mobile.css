@@ -161,3 +161,9 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 280px) {
+  .auth-container .header {
+    margin-top: 5%;
+  }
+}
