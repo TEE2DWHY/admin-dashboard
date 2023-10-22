@@ -1,3 +1,4 @@
+"use client";
 // styling
 import "../styles/dashboard.css";
 // data
@@ -9,13 +10,18 @@ import DailyFeed from "./dailyfeed";
 import Schedule from "./schedule";
 import LatestProjects from "./latestprojects";
 import { ArrowDown, Calendar, Filter, Reload } from "@/icons/icons";
-// import Modal from "./modal/modal";
-// import { useState } from "react";
+import { useEffect, useState } from "react";
+
 const CardIntro = () => {
+  const [username, setUserName] = useState("");
+  useEffect(() => {
+    const name = localStorage.getItem("name");
+    setUserName(name);
+  }, []);
   return (
     <div className="welcome-message">
       <div>
-        <h3>Welcome Tayo</h3>
+        <h3>Welcome {username}</h3>
         <p>AppStack Dashboard</p>
       </div>
       <img
@@ -28,7 +34,6 @@ const CardIntro = () => {
 };
 
 const User = () => {
-  // const [showTodayModal, setShowTodayModal] = useState(false);
   return (
     <>
       <div className="user">
@@ -38,11 +43,8 @@ const User = () => {
             <h4 className="today">
               <Calendar />
               Today
-              {/* <span onClick={() => setShowTodayModal(!showTodayModal)}> */}
               <ArrowDown />
-              {/* </span> */}
             </h4>
-            {/* {showTodayModal && <Modal />} */}
             <Filter />
             <Reload />
           </div>

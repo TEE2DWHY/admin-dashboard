@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import authFetch from "@/config/authFetch";
-
 // styling
 import "../../styles/auth.css";
 import "../../styles/mobile.css";
 
 const SignUp = () => {
+  const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,17 +21,19 @@ const SignUp = () => {
   };
 
   const handleSubmit = async (e) => {
+    const form = document.querySelector("form");
+    form.addEventListener("focusin", () => {
+      setFormResponse("");
+    });
     e.preventDefault();
-    const { password, confirmPassword } = formData;
-    if (password !== confirmPassword) {
-      alert("Password Mismatch!");
-      return;
-    }
     try {
       const response = await authFetch.post("/signup", formData);
-      console.log(response);
+      setFormResponse(response.data.msg);
+      setTimeout(() => {
+        window.location = "/login";
+      }, 3000);
     } catch (err) {
-      console.log(err);
+      setFormResponse(err.response.data.msg);
     }
   };
 
@@ -93,6 +95,7 @@ const SignUp = () => {
               onChange={handleChange}
             />
           </div>
+          <p className="form-response">{formResponse}</p>
           <button type="submit">Sign Up</button>
           <p className="alt-container">
             Already have an Account?

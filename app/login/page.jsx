@@ -3,8 +3,10 @@ import { useState } from "react";
 // styling
 import "../../styles/auth.css";
 import "../../styles/mobile.css";
+import authFetch from "@/config/authFetch";
 
 const Login = () => {
+  const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -15,9 +17,23 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    const form = document.querySelector("form");
+    form.addEventListener("focusin", () => {
+      setFormResponse("");
+    });
     e.preventDefault();
-    console.log(formData);
+    try {
+      const response = await authFetch.post("/login", formData);
+      setFormResponse(response.data.msg);
+      localStorage.setItem("name", response.data.name);
+      localStorage.setItem("isLoggedIn", true);
+      setTimeout(() => {
+        window.location = "/";
+      }, 3000);
+    } catch (err) {
+      setFormResponse(err.response.data.msg);
+    }
   };
 
   return (
@@ -47,7 +63,7 @@ const Login = () => {
               onChange={handleChange}
             />
           </div>
-
+          <p className="form-response">{formResponse}</p>
           <button type="submit">Log In</button>
           <p className="alt-container">
             Don't have an Account?

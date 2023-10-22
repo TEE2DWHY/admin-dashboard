@@ -6,9 +6,6 @@ const asyncWrapper = (fn) => {
       await fn(req, res, next);
     } catch (err) {
       next(err);
-      res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-        msg: err.message,
-      });
     }
   };
 };

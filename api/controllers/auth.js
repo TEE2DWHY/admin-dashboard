@@ -2,6 +2,7 @@ const { StatusCodes } = require("http-status-codes");
 const asyncWrapper = require("../middleware/asyncWrapper");
 const User = require("../model/User");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const signup = asyncWrapper(async (req, res) => {
   const { password, confirmPassword } = req.body;
@@ -23,7 +24,7 @@ const signup = asyncWrapper(async (req, res) => {
     password: hashedPassword,
   });
   res.status(StatusCodes.CREATED).json({
-    msg: `user with account name ${user.firstName} is created. Proceed to login`,
+    msg: `Account for ${user.firstName} is created. Redirecting....`,
   });
 });
 
@@ -40,8 +41,13 @@ const login = asyncWrapper(async (req, res) => {
       msg: "Invalid credentials.",
     });
   }
+  const token = jwt.sign({ email: req.body.email }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_LIFETIME,
+  });
   res.status(StatusCodes.OK).json({
-    msg: "Login is Successful.",
+    msg: "Login is Successful. Redirecting...",
+    name: user.firstName,
+    token: token,
   });
 });
 

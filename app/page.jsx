@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Dashboard from "@/components/dashboard";
 import "../styles/home.css";
 import Sidebar from "@/components/sidebar";
@@ -11,6 +11,13 @@ const Home = () => {
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
   };
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      window.location = "/login";
+    }
+  }, []);
 
   return (
     <Animate>

@@ -8,6 +8,10 @@ import {
   SignOut,
 } from "../../icons/profileIcons";
 const ProfileModal = ({ hideProfileModal }) => {
+  const logout = () => {
+    localStorage.clear("isLoggedIn");
+    window.location = "/login";
+  };
   return (
     <>
       <div className="profile-modal-container" onMouseLeave={hideProfileModal}>
@@ -28,7 +32,7 @@ const ProfileModal = ({ hideProfileModal }) => {
             <Help />
             Help
           </li>
-          <a href="./login">
+          <a onClick={() => logout()}>
             <li>
               <SignOut />
               Sign Out

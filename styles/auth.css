@@ -37,6 +37,12 @@ input:focus {
   transition: all 2s ease-in;
 }
 
+.form-response {
+  text-align: center;
+  font-size: 14px;
+  color: #1b1b1b;
+}
+
 form button {
   display: block;
   margin: 15px auto 10px auto;
