@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     const isLoggedIn = sessionStorage.getItem("isLoggedIn");
     if (!isLoggedIn) {
-      window.location = "/login";
+      window.location = "/";
     }
   }, []);
 
