@@ -9,6 +9,11 @@ body {
 .auth-container {
   width: 30%;
 }
+
+.appstack {
+  color: #1659c7;
+}
+
 .auth-header {
   text-align: center;
 }

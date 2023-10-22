@@ -4,6 +4,7 @@ const User = require("../model/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Register a New User
 const signup = asyncWrapper(async (req, res) => {
   const { password, confirmPassword } = req.body;
   if (!confirmPassword) {
@@ -28,6 +29,7 @@ const signup = asyncWrapper(async (req, res) => {
   });
 });
 
+// Login User
 const login = asyncWrapper(async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
   if (!user) {

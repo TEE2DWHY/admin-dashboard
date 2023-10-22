@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 const CardIntro = () => {
   const [username, setUserName] = useState("");
   useEffect(() => {
-    const name = localStorage.getItem("name");
+    const name = sessionStorage.getItem("name");
     setUserName(name);
   }, []);
   return (

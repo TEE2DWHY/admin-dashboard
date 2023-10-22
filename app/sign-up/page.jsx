@@ -30,7 +30,7 @@ const SignUp = () => {
       const response = await authFetch.post("/signup", formData);
       setFormResponse(response.data.msg);
       setTimeout(() => {
-        window.location = "/login";
+        window.location = "/";
       }, 3000);
     } catch (err) {
       setFormResponse(err.response.data.msg);
@@ -99,7 +99,7 @@ const SignUp = () => {
           <button type="submit">Sign Up</button>
           <p className="alt-container">
             Already have an Account?
-            <a href="./login">
+            <a href="/">
               <span className="alt-text"> Log in.</span>
             </a>
           </p>

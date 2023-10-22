@@ -9,8 +9,8 @@ import {
 } from "../../icons/profileIcons";
 const ProfileModal = ({ hideProfileModal }) => {
   const logout = () => {
-    localStorage.clear("isLoggedIn");
-    window.location = "/login";
+    sessionStorage.clear("isLoggedIn");
+    window.location = "/";
   };
   return (
     <>
