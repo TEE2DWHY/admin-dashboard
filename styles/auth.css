@@ -77,3 +77,10 @@ form button:hover {
   cursor: pointer;
   font-weight: 900;
 }
+
+.created-by {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 14px;
+  color: #1659c7;
+}

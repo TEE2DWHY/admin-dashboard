@@ -5,6 +5,7 @@ import "../styles/auth.css";
 import "../styles/mobile.css";
 import authFetch from "@/config/authFetch";
 import { storage } from "@/utils/storage";
+import { handleChange } from "@/utils/handleChange";
 
 const Login = () => {
   const [formResponse, setFormResponse] = useState("");
@@ -12,11 +13,6 @@ const Login = () => {
     email: "",
     password: "",
   });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleSubmit = async (e) => {
     const form = document.querySelector("form");
@@ -54,7 +50,7 @@ const Login = () => {
               placeholder="JohnDoe@gmail.com"
               name="email"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <div>
@@ -64,7 +60,7 @@ const Login = () => {
               placeholder="Password"
               name="password"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <p className="form-response">{formResponse}</p>
@@ -76,6 +72,9 @@ const Login = () => {
             </a>
           </p>
         </form>
+        <a href="mailto:isaacolorunfemi330@gmail.com" className="created-by">
+          <p>Created by Tee2dWhy.</p>
+        </a>
       </div>
     </>
   );

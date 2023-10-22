@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import authFetch from "@/config/authFetch";
-// styling
 import "../../styles/auth.css";
 import "../../styles/mobile.css";
+import { handleChange } from "@/utils/handleChange";
 
 const SignUp = () => {
   const [formResponse, setFormResponse] = useState("");
@@ -15,17 +15,13 @@ const SignUp = () => {
     confirmPassword: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
   const handleSubmit = async (e) => {
     const form = document.querySelector("form");
     form.addEventListener("focusin", () => {
       setFormResponse("");
     });
     e.preventDefault();
+    console.log(formData);
     try {
       const response = await authFetch.post("/signup", formData);
       setFormResponse(response.data.msg);
@@ -52,7 +48,7 @@ const SignUp = () => {
               placeholder="FirstName"
               name="firstName"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <div>
@@ -62,7 +58,7 @@ const SignUp = () => {
               placeholder="LastName"
               name="lastName"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <div>
@@ -72,7 +68,7 @@ const SignUp = () => {
               placeholder="JohnDoe@gmail.com"
               name="email"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <div>
@@ -82,7 +78,7 @@ const SignUp = () => {
               placeholder="Password"
               name="password"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <div>
@@ -92,7 +88,7 @@ const SignUp = () => {
               placeholder="Confirm Password"
               name="confirmPassword"
               required
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
           <p className="form-response">{formResponse}</p>
