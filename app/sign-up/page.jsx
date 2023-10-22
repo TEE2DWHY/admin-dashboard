@@ -21,7 +21,6 @@ const SignUp = () => {
       setFormResponse("");
     });
     e.preventDefault();
-    console.log(formData);
     try {
       const response = await authFetch.post("/signup", formData);
       setFormResponse(response.data.msg);
