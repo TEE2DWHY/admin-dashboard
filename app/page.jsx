@@ -77,7 +77,7 @@ const Login = () => {
             </a>
           </p>
         </form>
-        <a href="mailto:isaacolorunfemi330@gmail.com" className="created-by">
+        <a href="https://codewithty.netlify.app" className="created-by">
           <p>Created by Tee2dWhy.</p>
         </a>
       </div>
