@@ -4,8 +4,10 @@ import authFetch from "@/config/authFetch";
 import "../../styles/auth.css";
 import "../../styles/mobile.css";
 import { handleChange } from "@/utils/handleChange";
+import { Spinner } from "@/icons/icons";
 
 const SignUp = () => {
+  const [formLoading, setFormLoading] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -21,14 +23,17 @@ const SignUp = () => {
       setFormResponse("");
     });
     e.preventDefault();
+    setFormLoading(true);
     try {
       const response = await authFetch.post("/signup", formData);
+      setFormLoading(false);
       setFormResponse(response.data.msg);
       setTimeout(() => {
         window.location = "/";
       }, 3000);
     } catch (err) {
       setFormResponse(err.response.data.msg);
+      setFormLoading(false);
     }
   };
 
@@ -91,7 +96,7 @@ const SignUp = () => {
             />
           </div>
           <p className="form-response">{formResponse}</p>
-          <button type="submit">Sign Up</button>
+          <button type="submit">{formLoading ? <Spinner /> : "Sign Up"}</button>
           <p className="alt-container">
             Already have an Account?
             <a href="/">

@@ -220,3 +220,7 @@ export const Chat = () => {
     </svg>
   );
 };
+
+export const Spinner = () => {
+  return <div className="spinner"></div>;
+};

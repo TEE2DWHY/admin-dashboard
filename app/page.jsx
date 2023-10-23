@@ -6,8 +6,10 @@ import "../styles/mobile.css";
 import authFetch from "@/config/authFetch";
 import { storage } from "@/utils/storage";
 import { handleChange } from "@/utils/handleChange";
+import { Spinner } from "@/icons/icons";
 
 const Login = () => {
+  const [formLoading, setFormLoading] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
     email: "",
@@ -20,8 +22,10 @@ const Login = () => {
       setFormResponse("");
     });
     e.preventDefault();
+    setFormLoading(true);
     try {
       const response = await authFetch.post("/login", formData);
+      setFormLoading(false);
       setFormResponse(response.data.msg);
       storage("name", response.data.name);
       storage("isLoggedIn", true);
@@ -30,6 +34,7 @@ const Login = () => {
       }, 3000);
     } catch (err) {
       setFormResponse(err.response.data.msg);
+      setFormLoading(false);
     }
   };
 
@@ -64,7 +69,7 @@ const Login = () => {
             />
           </div>
           <p className="form-response">{formResponse}</p>
-          <button type="submit">Log In</button>
+          <button type="submit">{formLoading ? <Spinner /> : "Log in"}</button>
           <p className="alt-container">
             Don't have an Account?
             <a href="./sign-up">
