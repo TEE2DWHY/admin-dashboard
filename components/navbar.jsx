@@ -7,6 +7,7 @@ import CountryModal from "./modal/countryModal";
 import ProfileModal from "./modal/profileModal";
 const Navbar = ({ toggleSidebar }) => {
   // State Variables
+  const [name, setName] = useState("");
   const [chatNumber, setChatNumber] = useState(0);
   const [showCountryModal, setShowCountryNodal] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false);
@@ -15,6 +16,9 @@ const Navbar = ({ toggleSidebar }) => {
     const interval = setInterval(() => {
       setChatNumber(chatNumber + 1);
     }, 5000);
+
+    const user = sessionStorage.getItem("name");
+    setName(user);
 
     return () => {
       clearInterval(interval);
@@ -59,7 +63,7 @@ const Navbar = ({ toggleSidebar }) => {
           alt="avatar"
         />
         <p className="username">
-          Ashley Briggs
+          {name}
           <ArrowDown
             showProfileModal={() => setShowProfileModal(!showProfileModal)}
           />
