@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 // styling
 import "../styles/auth.css";
 import "../styles/mobile.css";
@@ -9,6 +11,7 @@ import { handleChange } from "@/utils/handleChange";
 import { Spinner } from "@/icons/icons";
 
 const Login = () => {
+  const router = useRouter();
   const [formLoading, setFormLoading] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
@@ -30,7 +33,7 @@ const Login = () => {
       storage("name", response.data.name);
       storage("isLoggedIn", true);
       setTimeout(() => {
-        window.location = "/dashboard";
+        router.push("/dashboard");
       }, 3000);
     } catch (err) {
       setFormResponse(err.response.data.msg);
@@ -72,9 +75,9 @@ const Login = () => {
           <button type="submit">{formLoading ? <Spinner /> : "Log in"}</button>
           <p className="alt-container">
             Don't have an Account?
-            <a href="./sign-up">
+            <Link href="./sign-up">
               <span className="alt-text"> Sign Up.</span>
-            </a>
+            </Link>
           </p>
         </form>
         <a href="https://codewithty.dev" target="_blank" className="created-by">

@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import authFetch from "@/config/authFetch";
+// styling
 import "../../styles/auth.css";
 import "../../styles/mobile.css";
 import { handleChange } from "@/utils/handleChange";
 import { Spinner } from "@/icons/icons";
 
 const SignUp = () => {
+  const router = useRouter();
   const [formLoading, setFormLoading] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
@@ -29,7 +32,7 @@ const SignUp = () => {
       setFormLoading(false);
       setFormResponse(response.data.msg);
       setTimeout(() => {
-        window.location = "/";
+        router.push("/");
       }, 3000);
     } catch (err) {
       setFormResponse(err.response.data.msg);
