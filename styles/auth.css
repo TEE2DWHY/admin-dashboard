@@ -5,7 +5,7 @@ body {
   height: 100vh;
   background-color: #f7f9fc;
 }
-/* Sign Up */
+
 .auth-container {
   width: 30%;
 }
@@ -17,6 +17,7 @@ body {
 .auth-header {
   text-align: center;
 }
+
 form {
   border: 2px solid #fff;
   border-radius: 5px;
