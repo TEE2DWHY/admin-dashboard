@@ -77,7 +77,7 @@ const Login = () => {
             </a>
           </p>
         </form>
-        <a href="https://codewithty.dev" className="created-by">
+        <a href="https://codewithty.dev" target="_blank" className="created-by">
           <p>Created by Tee2dWhy.</p>
         </a>
       </div>
