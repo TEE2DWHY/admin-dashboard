@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import authFetch from "@/config/authFetch";
 // styling
@@ -102,9 +103,9 @@ const SignUp = () => {
           <button type="submit">{formLoading ? <Spinner /> : "Sign Up"}</button>
           <p className="alt-container">
             Already have an Account?
-            <a href="/">
+            <Link href="/">
               <span className="alt-text"> Log in.</span>
-            </a>
+            </Link>
           </p>
         </form>
       </div>

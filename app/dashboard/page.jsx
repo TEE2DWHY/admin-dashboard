@@ -4,30 +4,36 @@ import Dashboard from "@/components/dashboard";
 import "../../styles/home.css";
 import Sidebar from "@/components/sidebar";
 import Animate from "@/libs/Animate";
-
+import { useAuth } from "@/utils/authWrapper";
+import { redirect } from "next/navigation";
 const App = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
+  const { isLoggedIn } = useAuth();
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
   useEffect(() => {
-    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
-    if (!isLoggedIn) {
-      window.location = "/";
+    const user = sessionStorage.getItem("isLoggedIn");
+    if (!user) {
+      redirect("/");
     }
-  }, []);
+  });
 
   return (
-    <Animate>
-      <div className="dashboard">
-        {isSidebarVisible && (
-          <Sidebar closeSideBar={() => setSidebarVisible(!isSidebarVisible)} />
-        )}
-        <Dashboard click={toggleSidebar} />
-      </div>
-    </Animate>
+    <>
+      <Animate>
+        <div className="dashboard">
+          {isSidebarVisible && (
+            <Sidebar
+              closeSideBar={() => setSidebarVisible(!isSidebarVisible)}
+            />
+          )}
+          {isLoggedIn && <Dashboard click={toggleSidebar} />}
+        </div>
+      </Animate>
+    </>
   );
 };
 

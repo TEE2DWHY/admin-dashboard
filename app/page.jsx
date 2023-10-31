@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/utils/authWrapper";
 // styling
 import "../styles/auth.css";
 import "../styles/mobile.css";
@@ -12,6 +13,7 @@ import { Spinner } from "@/icons/icons";
 
 const Login = () => {
   const router = useRouter();
+  const { setIsLoggedIn } = useAuth();
   const [formLoading, setFormLoading] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
@@ -30,8 +32,9 @@ const Login = () => {
       const response = await authFetch.post("/login", formData);
       setFormLoading(false);
       setFormResponse(response.data.msg);
+      storage("isLoggedIn", "true");
       storage("name", response.data.name);
-      storage("isLoggedIn", true);
+      setIsLoggedIn(true); // set isLoggedIn to be true upon successful account login crucial for providing immediate feedback to the user interface, such as showing authenticated content, changing the user interface etc.
       setTimeout(() => {
         router.push("/dashboard");
       }, 3000);

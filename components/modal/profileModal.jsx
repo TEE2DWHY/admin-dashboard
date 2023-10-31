@@ -1,5 +1,6 @@
 // styling
 import "../../styles/modal.css";
+import { useRouter } from "next/navigation";
 import {
   Analytics,
   Help,
@@ -8,10 +9,15 @@ import {
   SignOut,
 } from "../../icons/profileIcons";
 const ProfileModal = ({ hideProfileModal }) => {
+  // set router to useRouter
+  const router = useRouter();
+
+  // logout function
   const logout = () => {
     sessionStorage.clear("isLoggedIn");
-    window.location = "/";
+    router.push("/");
   };
+
   return (
     <>
       <div className="profile-modal-container" onMouseLeave={hideProfileModal}>
