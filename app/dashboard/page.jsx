@@ -7,7 +7,7 @@ import Animate from "@/libs/Animate";
 import { useAuth } from "@/utils/authWrapper";
 import { userFetch } from "@/config/authFetch";
 import { storage } from "@/utils/storage";
-import { redirect } from "next/navigation";
+
 const App = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
   const { isLoggedIn, setIsLoggedIn } = useAuth();
@@ -19,18 +19,19 @@ const App = () => {
   useEffect(() => {
     // server side authentication
     const authUser = async () => {
-      const token = sessionStorage.getItem("token");
-      if (token) {
-        try {
-          const response = await userFetch.get("/dashboard", {
-            headers: { Authorization: `Bearer ${token}` },
-          });
-          storage("name", response.data.name);
-          setIsLoggedIn(true);
-        } catch (err) {
-          location.href = "/";
+      try {
+        const token = sessionStorage.getItem("token");
+        if (!token) {
+          throw new Error("No token found");
         }
-      } else {
+
+        const response = await userFetch.get("/dashboard", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        storage("name", response.data.name);
+        setIsLoggedIn(true);
+      } catch (err) {
+        console.error(err);
         location.href = "/";
       }
     };
