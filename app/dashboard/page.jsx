@@ -31,7 +31,6 @@ const App = () => {
         storage("name", response.data.name);
         setIsLoggedIn(true);
       } catch (err) {
-        console.error(err);
         location.href = "/";
       }
     };
