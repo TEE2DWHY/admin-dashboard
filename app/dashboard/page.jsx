@@ -5,21 +5,37 @@ import "../../styles/home.css";
 import Sidebar from "@/components/sidebar";
 import Animate from "@/libs/Animate";
 import { useAuth } from "@/utils/authWrapper";
+import { userFetch } from "@/config/authFetch";
+import { storage } from "@/utils/storage";
 import { redirect } from "next/navigation";
 const App = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
   useEffect(() => {
-    const user = sessionStorage.getItem("isLoggedIn");
-    if (!user) {
-      redirect("/");
-    }
-  });
+    // server side authentication
+    const authUser = async () => {
+      const token = sessionStorage.getItem("token");
+      if (token) {
+        try {
+          const response = await userFetch.get("/dashboard", {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          storage("name", response.data.name);
+          setIsLoggedIn(true);
+        } catch (err) {
+          location.href = "/";
+        }
+      } else {
+        location.href = "/";
+      }
+    };
+    authUser();
+  }, []);
 
   return (
     <>

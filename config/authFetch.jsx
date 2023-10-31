@@ -1,5 +1,5 @@
 import axios from "axios";
-import { auth } from "./url";
+import { auth, user } from "./url";
 
 const authFetch = axios.create({
   baseURL: auth,
@@ -9,3 +9,10 @@ const authFetch = axios.create({
 });
 
 export default authFetch;
+
+export const userFetch = axios.create({
+  baseURL: user,
+  headers: {
+    accept: "application/json",
+  },
+});

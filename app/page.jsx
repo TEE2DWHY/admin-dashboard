@@ -32,9 +32,8 @@ const Login = () => {
       const response = await authFetch.post("/login", formData);
       setFormLoading(false);
       setFormResponse(response.data.msg);
-      storage("isLoggedIn", "true");
-      storage("name", response.data.name);
-      setIsLoggedIn(true); // set isLoggedIn to be true upon successful account login crucial for providing immediate feedback to the user interface, such as showing authenticated content, changing the user interface etc.
+      storage("token", response.data.token);
+      setIsLoggedIn(true);
       setTimeout(() => {
         router.push("/dashboard");
       }, 3000);
