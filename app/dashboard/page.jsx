@@ -7,8 +7,10 @@ import Animate from "@/libs/Animate";
 import { useAuth } from "@/utils/authWrapper";
 import { userFetch } from "@/config/authFetch";
 import { storage } from "@/utils/storage";
+import Preloader from "@/components/preloader";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [isSidebarVisible, setSidebarVisible] = useState(false);
   const { isLoggedIn, setIsLoggedIn } = useAuth();
 
@@ -24,12 +26,12 @@ const App = () => {
         if (!token) {
           throw new Error("No token found");
         }
-
         const response = await userFetch.get("/dashboard", {
           headers: { Authorization: `Bearer ${token}` },
         });
         storage("name", response.data.name);
         setIsLoggedIn(true);
+        setIsLoading(false);
       } catch (err) {
         location.href = "/";
       }
@@ -39,16 +41,20 @@ const App = () => {
 
   return (
     <>
-      <Animate>
-        <div className="dashboard">
-          {isSidebarVisible && (
-            <Sidebar
-              closeSideBar={() => setSidebarVisible(!isSidebarVisible)}
-            />
-          )}
-          {isLoggedIn && <Dashboard click={toggleSidebar} />}
-        </div>
-      </Animate>
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <Animate>
+          <div className="dashboard">
+            {isSidebarVisible && (
+              <Sidebar
+                closeSideBar={() => setSidebarVisible(!isSidebarVisible)}
+              />
+            )}
+            {isLoggedIn && <Dashboard click={toggleSidebar} />}
+          </div>
+        </Animate>
+      )}
     </>
   );
 };
