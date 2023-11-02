@@ -24,6 +24,7 @@ const App = () => {
       try {
         const token = sessionStorage.getItem("token");
         if (!token) {
+          setIsLoading(false);
           throw new Error("No token found");
         }
         const response = await userFetch.get("/dashboard", {
