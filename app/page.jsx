@@ -17,8 +17,8 @@ const Login = () => {
   const [formLoading, setFormLoading] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "ag@gmail.com",
+    password: "#a1234a#",
   });
 
   const handleSubmit = async (e) => {
@@ -57,8 +57,9 @@ const Login = () => {
             <label>Email</label>
             <input
               type="email"
-              placeholder="JohnDoe@gmail.com"
+              placeholder="ag@gmail.com"
               name="email"
+              value={formData.email}
               required
               onChange={(e) => handleChange(e, setFormData, formData)}
             />
@@ -69,6 +70,7 @@ const Login = () => {
               type="password"
               placeholder="Password"
               name="password"
+              value={formData.password}
               required
               onChange={(e) => handleChange(e, setFormData, formData)}
             />
