@@ -61,6 +61,7 @@ const Login = () => {
               name="email"
               value={formData.email}
               required
+              readOnly
               onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
@@ -72,6 +73,7 @@ const Login = () => {
               name="password"
               value={formData.password}
               required
+              readOnly
               onChange={(e) => handleChange(e, setFormData, formData)}
             />
           </div>
